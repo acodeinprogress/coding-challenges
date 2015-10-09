@@ -12,8 +12,6 @@ def reverse_list(node, previous=nil)
   node.next_node = previous
   if !temp.nil?
     x = reverse_list(temp, node)
-    puts x.value
-    puts node.value
     return x
   else
     return node
