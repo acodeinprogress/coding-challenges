@@ -29,13 +29,7 @@ fifth_node = Tree.new(5, [ninth_node])
 trunk   = Tree.new(2, [seventh_node, fifth_node])
 
 def bredth_first_search(tree, search_value)
-  if tree.payload == search_value
-    return tree
-  end
-  children_nodes = []
-  tree.children.each do |child|
-    children_nodes << child
-  end
+  children_nodes = [tree]
   while children_nodes.length > 0
     node = children_nodes.shift
     if node.payload == search_value
